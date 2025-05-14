@@ -24,9 +24,14 @@ void draw() {
 
   background(white);
 
+  // Square variables
+  int squareSize = 50;
+  int squareY = height/2 - squareSize/2;
+  
+
   // Controls square's bounce
   if(direction == true){
-    if(squareX >= width){
+    if((squareX + squareSize) >= width){
       direction = false;
     }
     else{
@@ -44,8 +49,6 @@ void draw() {
   
 
   // Draws the green square
-  int squareY = height/2;
-  int squareSize = 50;
   fill(green1);
   rect(squareX, squareY, squareSize, squareSize);
 }
