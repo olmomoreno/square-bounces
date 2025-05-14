@@ -31,19 +31,19 @@ void draw() {
 
   // Controls square's bounce
   if(direction == true){
-    if((squareX + squareSize) >= width){
-      direction = false;
+    if((squareX + squareSize) >= width){ //If limit is reached
+      direction = false; //Direction changes
     }
     else{
-      squareX++;
+      squareX++; //Displace to the right
     }
   }
   else{
-    if(squareX <= 0){
-      direction = true;
+    if(squareX <= 0){ //If limit is reached
+      direction = true; //Direction changes
     }
     else{
-      squareX--;
+      squareX--; //Displace to the left
     }
   }
   
