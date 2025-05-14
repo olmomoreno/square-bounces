@@ -9,6 +9,9 @@ color green2 = color(35, 124, 102);
 color white = color(255);
 color black = color(0);
 
+// Variable definitions
+int squareX = width/2;
+
 void setup() {
 
    // Processing window size
@@ -21,6 +24,8 @@ void draw() {
   background(white);
 
   // Draws the green square
+  int squareY = height/2;
+  int squareSize = 50;
   fill(green1);
-  rect(mouseX, mouseY, 50, 50);
+  rect(squareX, squareY, squareSize, squareSize);
 }
