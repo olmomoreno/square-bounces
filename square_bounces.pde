@@ -11,6 +11,7 @@ color black = color(0);
 
 // Variable definitions
 int squareX = width/2;
+boolean direction = true;
 
 void setup() {
 
@@ -22,6 +23,25 @@ void setup() {
 void draw() {
 
   background(white);
+
+  // Controls square's bounce
+  if(direction == true){
+    if(squareX >= width){
+      direction = false;
+    }
+    else{
+      squareX++;
+    }
+  }
+  else{
+    if(squareX <= 0){
+      direction = true;
+    }
+    else{
+      squareX--;
+    }
+  }
+  
 
   // Draws the green square
   int squareY = height/2;
