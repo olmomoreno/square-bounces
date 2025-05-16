@@ -7,6 +7,7 @@
 color green1 = color(29,185,84); 
 color green2 = color(35, 124, 102); 
 color gray1 = color(33, 33, 33);
+color gray2 = color(83, 83, 83);
 color white = color(255);
 color black = color(0);
 
@@ -36,13 +37,15 @@ void draw() {
   line(cardAreaWidth, 0, cardAreaWidth, height);
 
   // Draws Top App Bar
-
   noStroke();
   fill(gray1);
   rect(0, statusBarHeight, cardAreaWidth, topAppBarHeight);
 
   // Draws card
-
+  int cardWidth = cardAreaWidth - (margin * 2);
+  int roundCorners = 25;
+  fill(gray2);
+  rect(margin, statusBarHeight + topAppBarHeight + margin, cardWidth, height - statusBarHeight - topAppBarHeight - (margin * 2),roundCorners);
 
 
   // Square variables
