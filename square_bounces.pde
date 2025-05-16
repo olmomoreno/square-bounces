@@ -5,6 +5,7 @@
 
 // Sketch's fonts
 PFont robotoRegular16;
+PFont robotoRegular24;
 
 // Color definitions
 color green1 = color(29,185,84); 
@@ -25,6 +26,7 @@ void setup() {
 
   // Creates font
   robotoRegular16 = createFont("fonts/Roboto-Regular.ttf", 16);
+  robotoRegular24 = createFont("fonts/Roboto-Regular.ttf", 24);
   
 }
 
@@ -39,6 +41,7 @@ void draw() {
 
   // Font size
   int fontSize16 = 16;
+  int fontSize24 = 24;
 
   // Draws card/working area separation line
   int cardAreaWidth = 200;
@@ -64,6 +67,12 @@ void draw() {
   fill(white);
   textFont(robotoRegular16, fontSize16);
   text(time, margin, statusBarHeight - textOffsetHeight);
+
+  // Writes Top App Bar text
+  textOffsetHeight = 15;
+  String proLab = "Processing Lab";
+  textFont(robotoRegular24, fontSize24);
+  text(proLab, margin, statusBarHeight + topAppBarHeight - textOffsetHeight);
 
 
   // Square variables
