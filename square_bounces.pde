@@ -20,7 +20,10 @@ color black = color(0);
 
 // Variable definitions
 int squareX = width/2;
+int sliderButtonX = 0;
 boolean direction = true;
+boolean overSlider = false;
+boolean locked = false;
 
 void setup() {
 
@@ -108,12 +111,18 @@ void draw() {
   // Draws slider line
   strokeWeight(4);
   stroke(white);
-  line((margin *2), statusBarHeight + topAppBarHeight + margin + (padding28 * 8), cardWidth, statusBarHeight + topAppBarHeight + margin + (padding28 * 8));
+  line((margin * 2), statusBarHeight + topAppBarHeight + margin + (padding28 * 8), cardWidth, statusBarHeight + topAppBarHeight + margin + (padding28 * 8));
 
   // Draws slider button
   int circleSize = 20;
   strokeWeight(1);
-  circle((margin * 2) + (circleSize/2), statusBarHeight + topAppBarHeight + margin + (padding28 * 8) + (circleSize/32), circleSize);
+  if(sliderButtonX < (margin * 2)){
+    sliderButtonX = margin * 2;
+  }
+  else if(sliderButtonX > cardWidth){
+    sliderButtonX =  cardWidth - (circleSize);
+  }
+  circle(sliderButtonX + (circleSize/2), statusBarHeight + topAppBarHeight + margin + (padding28 * 8) + (circleSize/32), circleSize);
 
 
   // Square variables
@@ -143,4 +152,29 @@ void draw() {
   stroke(white);
   fill(green1);
   rect(squareX, squareY, squareSize, squareSize);
+
+  // Checks if mouse is over slider's button
+  if((mouseY >= statusBarHeight + topAppBarHeight + margin + (padding28 * 8) - (circleSize)) && (mouseY <= statusBarHeight + topAppBarHeight + margin + (padding28 * 8) + (circleSize))){
+    overSlider = true;
+  }
+
+}
+
+// Interruption when mouse pressed event
+void mousePressed() {
+  if(overSlider) { 
+    locked = true; 
+  } else {
+    locked = false;
+  }
+}
+
+void mouseDragged() {
+  if(locked) {
+    sliderButtonX = mouseX; 
+  }
+}
+
+void mouseReleased() {
+  locked = false;
 }
