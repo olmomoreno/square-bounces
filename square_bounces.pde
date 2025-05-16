@@ -19,8 +19,8 @@ color white = color(255);
 color black = color(0);
 
 // Variable definitions
-int squareX = width/2;
-int sliderButtonX = 0;
+int squareX = 200;
+int sliderButtonX = 32;
 boolean direction = true;
 boolean overSlider = false;
 boolean locked = false;
@@ -116,12 +116,19 @@ void draw() {
   // Draws slider button
   int circleSize = 20;
   strokeWeight(1);
-  if(sliderButtonX < (margin * 2)){
-    sliderButtonX = margin * 2;
+
+  // Checks if mouse is over slider's button
+  if(locked == true){ // Permit when mouse is pressed
+
+    if((mouseY >= statusBarHeight + topAppBarHeight + margin + (padding28 * 8) - (circleSize/2)) && // Is the mouse over top half of slider button?
+       (mouseY <= statusBarHeight + topAppBarHeight + margin + (padding28 * 8) + (circleSize/2))){  // Is the mouse over bottom half of slider button?
+
+      if((mouseX > (margin * 2)) && (mouseX < cardWidth - circleSize)){ // Is the mouse over the slider line?
+        sliderButtonX = mouseX;
+      }
+    }
   }
-  else if(sliderButtonX > cardWidth){
-    sliderButtonX =  cardWidth - (circleSize);
-  }
+ 
   circle(sliderButtonX + (circleSize/2), statusBarHeight + topAppBarHeight + margin + (padding28 * 8) + (circleSize/32), circleSize);
 
 
@@ -153,27 +160,23 @@ void draw() {
   fill(green1);
   rect(squareX, squareY, squareSize, squareSize);
 
-  // Checks if mouse is over slider's button
-  if((mouseY >= statusBarHeight + topAppBarHeight + margin + (padding28 * 8) - (circleSize)) && (mouseY <= statusBarHeight + topAppBarHeight + margin + (padding28 * 8) + (circleSize))){
-    overSlider = true;
-  }
-
 }
 
 // Interruption when mouse pressed event
 void mousePressed() {
-  if(overSlider) { 
-    locked = true; 
-  } else {
-    locked = false;
-  }
+  locked = true;
+  // if(overSlider) { 
+  //   locked = true; 
+  // } else {
+  //   locked = false;
+  // }
 }
 
-void mouseDragged() {
-  if(locked) {
-    sliderButtonX = mouseX; 
-  }
-}
+// void mouseDragged() {
+//   if(locked) {
+//     sliderButtonX = mouseX; 
+//   }
+// }
 
 void mouseReleased() {
   locked = false;
