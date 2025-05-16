@@ -24,6 +24,7 @@ int sliderButtonX = 32;
 boolean direction = true;
 boolean overSlider = false;
 boolean locked = false;
+int speedValue = 1;
 
 void setup() {
 
@@ -99,9 +100,8 @@ void draw() {
   text(cardSubTitle, margin * 2, statusBarHeight + topAppBarHeight + margin + (padding28 * 2));
 
   // Writes card number variable
-  String cardNumVAr = "15";
   textFont(robotoRegular50, fontSize50);
-  text(cardNumVAr, margin * 2, statusBarHeight + topAppBarHeight + margin + (padding28 * 5));
+  text(speedValue, margin * 2, statusBarHeight + topAppBarHeight + margin + (padding28 * 5));
 
   // Writes card number variable subtitle
   String cardNumVArSub = "Displacement speed";
@@ -125,6 +125,8 @@ void draw() {
 
       if((mouseX > (margin * 2)) && (mouseX < cardWidth - circleSize)){ // Is the mouse over the slider line?
         sliderButtonX = mouseX;
+        float sldrX = map(sliderButtonX, margin * 2, cardWidth - circleSize, 1, 21);
+        speedValue = int(sldrX);
       }
     }
   }
@@ -165,17 +167,9 @@ void draw() {
 // Interruption when mouse pressed event
 void mousePressed() {
   locked = true;
-  // if(overSlider) { 
-  //   locked = true; 
-  // } else {
-  //   locked = false;
-  // }
 }
 
 // void mouseDragged() {
-//   if(locked) {
-//     sliderButtonX = mouseX; 
-//   }
 // }
 
 void mouseReleased() {
