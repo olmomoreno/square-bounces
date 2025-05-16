@@ -2,6 +2,8 @@
 **  SCENE: This scene design consist of 0 interactive elements, **
 **  it displays a green square that bounces horizontaly.        **
 *****************************************************************/
+//Images
+PImage rocketIcon;
 
 // Sketch's fonts
 PFont robotoRegular12;
@@ -30,6 +32,9 @@ void setup() {
 
    // Processing window size
   size(600, 400);
+
+  // Loads image
+  rocketIcon = loadImage("images/rocket_launch_24dp_FFFFFF.png");
 
   // Creates font
   robotoRegular12 = createFont("fonts/Roboto-Regular.ttf", 12);
@@ -72,7 +77,12 @@ void draw() {
   int cardWidth = cardAreaWidth - (margin * 2);
   int roundCorners = 25;
   fill(gray2);
-  rect(margin, statusBarHeight + topAppBarHeight + margin, cardWidth, height - statusBarHeight - topAppBarHeight - (margin * 2),roundCorners);
+  rect(margin, statusBarHeight + topAppBarHeight + margin, cardWidth, height - statusBarHeight - topAppBarHeight - (margin * 2), roundCorners);
+
+  // Draws status bar image
+  int iconSize = 16;
+  int iconOffset = 4;
+  image(rocketIcon, cardAreaWidth - margin - iconSize, iconOffset, iconSize, iconSize);
 
   // Writes clock time
   int m = minute();  // Values from 0 - 59
@@ -157,10 +167,11 @@ void draw() {
   }
   
   // Draws the green square
+  roundCorners = 10;
   strokeWeight(1);
   stroke(white);
   fill(green1);
-  rect(squareX, squareY, squareSize, squareSize);
+  rect(squareX, squareY, squareSize, squareSize, roundCorners);
 
 }
 
