@@ -19,7 +19,7 @@ color white = color(255);
 color black = color(0);
 
 // Variable definitions
-int squareX = 200;
+float squareX = 200.0;
 int sliderButtonX = 32;
 boolean direction = true;
 boolean overSlider = false;
@@ -144,7 +144,7 @@ void draw() {
       direction = false; //Direction changes
     }
     else{
-      squareX++; //Displace to the right
+      squareX += speedValue; //Displace to the right
     }
   }
   else{
@@ -152,7 +152,7 @@ void draw() {
       direction = true; //Direction changes
     }
     else{
-      squareX--; //Displace to the left
+      squareX -= speedValue; //Displace to the left
     }
   }
   
