@@ -8,6 +8,7 @@ PFont robotoRegular12;
 PFont robotoRegular16;
 PFont robotoRegular20;
 PFont robotoRegular24;
+PFont robotoRegular50;
 
 // Color definitions
 color green1 = color(29,185,84); 
@@ -31,6 +32,7 @@ void setup() {
   robotoRegular16 = createFont("fonts/Roboto-Regular.ttf", 16);
   robotoRegular20 = createFont("fonts/Roboto-Regular.ttf", 20);
   robotoRegular24 = createFont("fonts/Roboto-Regular.ttf", 24);
+  robotoRegular50 = createFont("fonts/Roboto-Regular.ttf", 50);
   
 }
 
@@ -49,6 +51,7 @@ void draw() {
   int fontSize16 = 16;
   int fontSize20 = 20;
   int fontSize24 = 24;
+  int fontSize50 = 50;
 
   // Draws card/working area separation line
   int cardAreaWidth = 200;
@@ -90,6 +93,11 @@ void draw() {
   String cardSubTitle = "Interactive sketch";
   textFont(robotoRegular12, fontSize12);
   text(cardSubTitle, margin * 2, statusBarHeight + topAppBarHeight + margin + (padding28 * 2));
+
+  // Writes card number variable
+  String cardNumVAr = "15";
+  textFont(robotoRegular50, fontSize50);
+  text(cardNumVAr, margin * 2, statusBarHeight + topAppBarHeight + margin + (padding28 * 5));
 
 
   // Square variables
