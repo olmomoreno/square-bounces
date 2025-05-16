@@ -3,6 +3,9 @@
 **  it displays a green square that bounces horizontaly.        **
 *****************************************************************/
 
+// Sketch's fonts
+PFont robotoRegular16;
+
 // Color definitions
 color green1 = color(29,185,84); 
 color green2 = color(35, 124, 102); 
@@ -19,6 +22,9 @@ void setup() {
 
    // Processing window size
   size(600, 400);
+
+  // Creates font
+  robotoRegular16 = createFont("fonts/Roboto-Regular.ttf", 16);
   
 }
 
@@ -30,6 +36,9 @@ void draw() {
   int statusBarHeight = 24;
   int topAppBarHeight = 45;
   int margin = 16;
+
+  // Font size
+  int fontSize16 = 16;
 
   // Draws card/working area separation line
   int cardAreaWidth = 200;
@@ -46,6 +55,15 @@ void draw() {
   int roundCorners = 25;
   fill(gray2);
   rect(margin, statusBarHeight + topAppBarHeight + margin, cardWidth, height - statusBarHeight - topAppBarHeight - (margin * 2),roundCorners);
+
+  // Writes clock time
+  int m = minute();  // Values from 0 - 59
+  int h = hour();    // Values from 0 - 23
+  int textOffsetHeight = 6;
+  String time = nf(h, 2) + ":" + nf(m, 2);
+  fill(white);
+  textFont(robotoRegular16, fontSize16);
+  text(time, margin, statusBarHeight - textOffsetHeight);
 
 
   // Square variables
