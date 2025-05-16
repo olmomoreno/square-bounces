@@ -4,7 +4,9 @@
 *****************************************************************/
 
 // Sketch's fonts
+PFont robotoRegular12;
 PFont robotoRegular16;
+PFont robotoRegular20;
 PFont robotoRegular24;
 
 // Color definitions
@@ -25,7 +27,9 @@ void setup() {
   size(600, 400);
 
   // Creates font
+  robotoRegular12 = createFont("fonts/Roboto-Regular.ttf", 12);
   robotoRegular16 = createFont("fonts/Roboto-Regular.ttf", 16);
+  robotoRegular20 = createFont("fonts/Roboto-Regular.ttf", 20);
   robotoRegular24 = createFont("fonts/Roboto-Regular.ttf", 24);
   
 }
@@ -35,12 +39,15 @@ void draw() {
   background(black);
 
   // Paddings (units -> px)
+  int padding28 = 28;
   int statusBarHeight = 24;
   int topAppBarHeight = 45;
   int margin = 16;
 
   // Font size
+  int fontSize12 = 12;
   int fontSize16 = 16;
+  int fontSize20 = 20;
   int fontSize24 = 24;
 
   // Draws card/working area separation line
@@ -74,12 +81,21 @@ void draw() {
   textFont(robotoRegular24, fontSize24);
   text(proLab, margin, statusBarHeight + topAppBarHeight - textOffsetHeight);
 
+  // Writes card title
+  String cardTitle = "Sqr. bounces";
+  textFont(robotoRegular20, fontSize20);
+  text(cardTitle, margin * 2, statusBarHeight + topAppBarHeight + margin + padding28);
+
+  // Writes card subtitle
+  String cardSubTitle = "Processing interactive sketch";
+  textFont(robotoRegular12, fontSize12);
+  text(cardSubTitle, margin * 2, statusBarHeight + topAppBarHeight + margin + (padding28 * 2));
+
 
   // Square variables
   int squareSize = 50;
   int squareY = height/2 - squareSize/2;
   
-
   // Controls square's bounce
   if(direction == true){
     if((squareX + squareSize) >= width){ //If limit is reached
@@ -98,7 +114,6 @@ void draw() {
     }
   }
   
-
   // Draws the green square
   stroke(white);
   fill(green1);
