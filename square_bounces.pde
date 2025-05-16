@@ -87,7 +87,7 @@ void draw() {
   text(cardTitle, margin * 2, statusBarHeight + topAppBarHeight + margin + padding28);
 
   // Writes card subtitle
-  String cardSubTitle = "Processing interactive sketch";
+  String cardSubTitle = "Interactive sketch";
   textFont(robotoRegular12, fontSize12);
   text(cardSubTitle, margin * 2, statusBarHeight + topAppBarHeight + margin + (padding28 * 2));
 
