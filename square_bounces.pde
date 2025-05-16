@@ -55,6 +55,7 @@ void draw() {
 
   // Draws card/working area separation line
   int cardAreaWidth = 200;
+  strokeWeight(1);
   stroke(white);
   line(cardAreaWidth, 0, cardAreaWidth, height);
 
@@ -104,6 +105,11 @@ void draw() {
   textFont(robotoRegular12, fontSize12);
   text(cardNumVArSub, margin * 2, statusBarHeight + topAppBarHeight + margin + (padding28 * 6));
 
+  // Draws slider line
+  strokeWeight(4);
+  stroke(white);
+  line((margin *2), statusBarHeight + topAppBarHeight + margin + (padding28 * 8), cardWidth, statusBarHeight + topAppBarHeight + margin + (padding28 * 8));
+
 
   // Square variables
   int squareSize = 50;
@@ -128,6 +134,7 @@ void draw() {
   }
   
   // Draws the green square
+  strokeWeight(1);
   stroke(white);
   fill(green1);
   rect(squareX, squareY, squareSize, squareSize);
