@@ -6,6 +6,7 @@
 // Color definitions
 color green1 = color(29,185,84); 
 color green2 = color(35, 124, 102); 
+color gray1 = color(33, 33, 33);
 color white = color(255);
 color black = color(0);
 
@@ -22,7 +23,27 @@ void setup() {
 
 void draw() {
 
-  background(white);
+  background(black);
+
+  // Paddings (units -> px)
+  int statusBarHeight = 24;
+  int topAppBarHeight = 45;
+  int margin = 16;
+
+  // Draws card/working area separation line
+  int cardAreaWidth = 200;
+  stroke(white);
+  line(cardAreaWidth, 0, cardAreaWidth, height);
+
+  // Draws Top App Bar
+
+  noStroke();
+  fill(gray1);
+  rect(0, statusBarHeight, cardAreaWidth, topAppBarHeight);
+
+  // Draws card
+
+
 
   // Square variables
   int squareSize = 50;
@@ -39,7 +60,7 @@ void draw() {
     }
   }
   else{
-    if(squareX <= 0){ //If limit is reached
+    if(squareX <= cardAreaWidth){ //If limit is reached
       direction = true; //Direction changes
     }
     else{
@@ -49,6 +70,7 @@ void draw() {
   
 
   // Draws the green square
+  stroke(white);
   fill(green1);
   rect(squareX, squareY, squareSize, squareSize);
 }
