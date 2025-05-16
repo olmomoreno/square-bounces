@@ -110,6 +110,11 @@ void draw() {
   stroke(white);
   line((margin *2), statusBarHeight + topAppBarHeight + margin + (padding28 * 8), cardWidth, statusBarHeight + topAppBarHeight + margin + (padding28 * 8));
 
+  // Draws slider button
+  int circleSize = 20;
+  strokeWeight(1);
+  circle((margin * 2) + (circleSize/2), statusBarHeight + topAppBarHeight + margin + (padding28 * 8) + (circleSize/32), circleSize);
+
 
   // Square variables
   int squareSize = 50;
