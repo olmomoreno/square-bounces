@@ -99,6 +99,11 @@ void draw() {
   textFont(robotoRegular50, fontSize50);
   text(cardNumVAr, margin * 2, statusBarHeight + topAppBarHeight + margin + (padding28 * 5));
 
+  // Writes card number variable subtitle
+  String cardNumVArSub = "Displacement speed";
+  textFont(robotoRegular12, fontSize12);
+  text(cardNumVArSub, margin * 2, statusBarHeight + topAppBarHeight + margin + (padding28 * 6));
+
 
   // Square variables
   int squareSize = 50;
