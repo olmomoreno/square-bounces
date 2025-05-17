@@ -28,7 +28,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/olmomoreno/square-bounces">
-    <img src="data/images/square_bounces.gif" alt="Logo" width="80" height="80">
+    <img src="data/images/processing_2021_logo.png" alt="Logo" width="100" height="100">
   </a>
 
   <h3 align="center">Square bounces</h3>
@@ -80,7 +80,7 @@
 <!-- ABOUT THE PROJECT -->
 ## 📖 About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://github.com/olmomoreno/square-bounces)
+[![Square_bounces][product-screenshot]](https://github.com/olmomoreno/square-bounces)
 
 This is an interactive Processing sketch. It displays two main areas in the window: a) a card control element (left) and b) an animation (right). The card control involves a slider that changes the speed value of a square that bounces horizontally when the mouse is pressed. The square is horizontally displaced from side to side, once the square´s edge reaches the left or right limit, it automatically changes direction. There are 20 different speeds that can be adjusted to increase or decrease the square´s displacement speed. The card´s slider is active when the mouse hovers and is pressed on the slider´s button. Once the mouse is released, the slider´s button is unactive.
 
@@ -248,7 +248,7 @@ Template adapted from [othneildrew/Best-README-Template](https://github.com/othn
 [license-url]: https://github.com/othneildrew/Best-README-Template/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/othneildrew
-[product-screenshot]: images/screenshot.png
+[product-screenshot]: data/images/square_bounces.gif
 [Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
 [Next-url]: https://nextjs.org/
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
