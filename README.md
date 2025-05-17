@@ -245,7 +245,7 @@ Template adapted from [othneildrew/Best-README-Template](https://github.com/othn
 [issues-shield]: https://img.shields.io/github/issues/olmomoreno/square-bounces.svg?style=for-the-badge
 [issues-url]: https://github.com/olmomoreno/square-bounces/issues
 [license-shield]: https://img.shields.io/github/license/olmomoreno/square-bounces.svg?style=for-the-badge
-[license-url]: https://github.com/olmomoreno/square-bounces/blob/master/LICENSE.txt
+[license-url]: https://github.com/olmomoreno/square-bounces/blob/main/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/othneildrew
 [product-screenshot]: data/images/square_bounces.gif
