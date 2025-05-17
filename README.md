@@ -250,7 +250,7 @@ Template adapted from [othneildrew/Best-README-Template](https://github.com/othn
 [linkedin-url]: https://linkedin.com/in/othneildrew
 [product-screenshot]: data/images/square_bounces.gif
 [processing-shield]: https://img.shields.io/badge/Designed_for-Processing-FFFFFF.svg?style=for-the-badge&logo=processingfoundation
-[processing_second-shield]: https://img.shields.io/badge/Processing-FFFFFF.svg?style=for-the-badge&logo=processingfoundation
+[processing_second-shield]: https://img.shields.io/badge/Processing-006699.svg?style=for-the-badge&logo=processingfoundation
 [processing-url]: https://processing.org/
 [vscode-shield]: https://img.shields.io/badge/Coded_with-VSCode-FFFFFF.svg?style=for-the-badge
 [vscode-url]: https://code.visualstudio.com/
