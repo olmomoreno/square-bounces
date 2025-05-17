@@ -56,7 +56,7 @@
     <li>
       <a href="#-about-the-project">About The Project</a>
       <ul>
-        <li><a href="#-built-with">Built With</a></li>
+        <li><a href="#%EF%B8%8F-built-with">Built With</a></li>
       </ul>
     </li>
     <li>
@@ -66,7 +66,7 @@
          <li><a href="#-opening">Opening</a></li>
       </ul>
     </li>
-    <li><a href="#-usage">Usage</a></li>
+    <li><a href="#usage">Usage</a></li>
     <li><a href="#-roadmap">Roadmap</a></li>
     <li><a href="#-contributing">Contributing</a></li>
     <li><a href="#-license">License</a></li>
