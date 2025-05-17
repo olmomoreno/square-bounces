@@ -1,6 +1,8 @@
 /*****************************************************************
-**  SCENE: This scene design consist of 0 interactive elements, **
-**  it displays a green square that bounces horizontaly.        **
+**  SCENE: This scene design consist of 1 interactive element,  **
+**  it displays a green square that bounces horizontaly. The    **
+**  displacement speed can be modified using the slider in the  **
+**  card control area.                                          **
 *****************************************************************/
 //Images
 PImage rocketIcon;
@@ -170,7 +172,7 @@ void draw() {
   roundCorners = 10;
   strokeWeight(1);
   stroke(white);
-  fill(green1);
+  fill(green1); 
   rect(squareX, squareY, squareSize, squareSize, roundCorners);
 
 }
