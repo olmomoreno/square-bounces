@@ -28,7 +28,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/olmomoreno/square-bounces">
-    <img src="data/images/square_bounces.gif" alt="Logo" width="80" height="80">
+    <img src="data/images/processing_2021_logo.png" alt="Logo" width="100" height="100">
   </a>
 
   <h3 align="center">Square bounces</h3>
