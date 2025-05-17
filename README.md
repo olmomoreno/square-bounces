@@ -91,7 +91,9 @@ This is an interactive Processing sketch. It displays two main areas in the wind
 ### 🛠️ Built With
 
 * [![Processing][processing-shield]][processing-url]
-* ![Processing](https://img.shields.io/badge/Processing-Processing-white?style=for-the-badge&labelColor=blue&logo=https://raw.githubusercontent.com/olmomoreno/square-bounces/main/data/images/processingfoundation.svg&logoColor=white)
+* ![Processing](https://img.shields.io/badge/Processing-Processing-white?style=for-the-badge&labelColor=blue&logo=https://github.com/olmomoreno/square-bounces/main/data/images/processingfoundation.svg&logoColor=white)
+* [![Made with Unity](https://img.shields.io/badge/made_with-Unity-FFFFFF.svg?style=flat-square&logo=processing)](https://unity3d.com)
+* [![Made with Unity](https://img.shields.io/badge/made_with-Unity-FFFFFF.svg?style=for-the-badge&logo=unity)](https://unity3d.com)
 
 * [![VSCode][vscode-shield]][vscode-url]
 
