@@ -4,6 +4,7 @@
 **  displacement speed can be modified using the slider in the  **
 **  card control area.                                          **
 *****************************************************************/
+
 //Images
 PImage rocketIcon;
 
@@ -44,7 +45,6 @@ void setup() {
   robotoRegular20 = createFont("fonts/Roboto-Regular.ttf", 20);
   robotoRegular24 = createFont("fonts/Roboto-Regular.ttf", 24);
   robotoRegular50 = createFont("fonts/Roboto-Regular.ttf", 50);
-  
 }
 
 void draw() {
@@ -174,7 +174,6 @@ void draw() {
   stroke(white);
   fill(green1); 
   rect(squareX, squareY, squareSize, squareSize, roundCorners);
-
 }
 
 // Interruption when mouse pressed event
