@@ -23,7 +23,6 @@ Please clearly describe the bug/error you have encountered and include details a
 
 ### Desired behaviour
 
-Describe lo que esperabas que ocurriera al realizar los pasos anteriores.
 Please describe what behaviour you were expecting when following the previous steps.
 
 ### Screenshots and logs
